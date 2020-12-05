@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BOARD: STM32F103RET6_creality # As per https://www.reddit.com/r/ender3/comments/i9xt6e/stepbystep_guide_for_ender_3_v2_firmware_w/
+      USE_BRANCH: bugfix-2.0.x  
 
     steps:
       - name: Check out repo
