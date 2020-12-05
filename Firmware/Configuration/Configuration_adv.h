@@ -1881,10 +1881,6 @@
 // https://github.com/OctoPrint/OctoPrint/issues/2834#issuecomment-505780218
 // To enable ADVANCED_OK
 
-// Explicitly set for optimum comms
-#define BAUDRATE 500000
-#define BLOCK_BUFFER_SIZE 64
-
 // The ASCII buffer for serial input
 #define MAX_CMD_SIZE 96
 #define BUFSIZE 32
