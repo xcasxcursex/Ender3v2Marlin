@@ -19,7 +19,6 @@ https://marlin.crc.id.au/faq/Ender%203%20V2/#hybrid
 
 ## Changes from Marlin stock Ender 3 V2 configuration:
 - Extrusion
-  - Adds G2 / G3 Arc support
   - Adds G10 / G11 Firmware based retraction (Use M207, M208, M209 to configure)
   - Adds M600 - Filament Change
   - Adds M603 - Set Filament Load / Unload length
@@ -27,6 +26,7 @@ https://marlin.crc.id.au/faq/Ender%203%20V2/#hybrid
   - Adds M702 - Unload Filament
   - Nozzle Parking enabled
 - Motion
+  - Adds G2 / G3 - Arc support
   - S-Curve Acceleration enabled
   - Junction Deviation enabled \ Jerk disabled
 - Hardware Support
