@@ -799,6 +799,11 @@
 
 #define DEFAULT_EJERK    5.0  // May be used by Linear Advance
 
+// Dummy entries to stop LCD menu build from failing when it assumes they are present.
+#define DEFAULT_XJERK 0.0
+#define DEFAULT_YJERK 0.0
+#define DEFAULT_ZJERK 0.3
+
 /**
  * Junction Deviation Factor
  *
