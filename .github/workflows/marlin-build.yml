@@ -12,7 +12,7 @@ jobs:
     name: Compile and Push Firmware
     runs-on: ubuntu-latest
     env:
-      BOARD: STM32F103RC_btt_512K
+      BOARD: STM32F103RET6_creality # As per https://www.reddit.com/r/ender3/comments/i9xt6e/stepbystep_guide_for_ender_3_v2_firmware_w/
 
     steps:
       - name: Check out repo
