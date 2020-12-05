@@ -802,7 +802,8 @@
 // Dummy entries to stop LCD menu build from failing when it assumes they are present.
 #define DEFAULT_XJERK 0.0
 #define DEFAULT_YJERK 0.0
-#define DEFAULT_ZJERK 0.3
+#define DEFAULT_ZJERK 0.0
+#define MAX_JERK_EDIT_VALUES { 0, 0, 0, 0 }
 
 /**
  * Junction Deviation Factor
