@@ -3228,6 +3228,50 @@
 
   #define USER_DESC_5 "Home & Info"
   #define USER_GCODE_5 "G28\nM503"
+
+  #define USER_DESC_6 "Leveling Script"
+  #define USER_GCODE_6 "G90\n\
+G28 ; Home all axis\n\
+M25 ; \n\
+G1 Z5 ; Lift Z axis\n\
+G1 X32 Y36 F3000; Move to Position 1\n\
+G1 Z0\n\
+M25 ; Pause print\n\
+G1 Z10 ; Lift Z axis\n\
+G1 X32 Y206 F3000; Move to Position 2\n\
+G1 Z0\n\
+M25 ; Pause print\n\
+G1 Z5 ; Lift Z axis\n\
+G1 X202 Y206 F3000; Move to Position 3\n\
+G1 Z0\n\
+M25 ; Pause print\n\
+G1 Z5 ; Lift Z axis\n\
+G1 X202 Y36 F3000; Move to Position 4\n\
+G1 Z0\n\
+M25 ; Pause print\n\
+G1 Z5 ; Lift Z axis\n\
+G1 X117 Y121 F3000; Move to Position 5\n\
+G1 Z0\n\
+M25 ; Pause print\n\
+G1 Z5 ; Lift Z axis\n\
+G1 X32 Y206 F3000; Move to Position 2\n\
+G1 Z0\n\
+M25 ; Pause print\n\
+G1 Z5 ; Lift Z axis\n\
+G1 X202 Y206 F3000; Move to Position 3\n\
+G1 Z0\n\
+M25 ; Pause print\n\
+G1 Z5 ; Lift Z axis\n\
+G1 X202 Y36 F3000; Move to Position 4\n\
+G1 Z0\n\
+M25 ; Pause print\n\
+G1 Z5 ; Lift Z axis\n\
+G1 X32 Y36 F3000; Move to Position 1\n\
+G1 Z0\n\
+M25 ; Pause print\n\
+G28;\n\
+M84 ; disable motors\n"
+
 #endif
 
 /**
