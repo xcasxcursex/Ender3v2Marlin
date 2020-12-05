@@ -17,14 +17,14 @@ https://www.chepclub.com/ender-3-v2-firmware.html
 Changes from Marlin stock Ender 3 V2 configuration:
 
  - Bed set to 235 x 235
- - Adds G2 / G3 Arc support
- - Adds G10 / G11 Firmware based retraction (Use M207, M208, M209 to configure)
- - Adds M600 - Filament Change
- - Adds M603 - Set Filament Load / Unload length
- - Adds M701 - Load Filament
- - Adds M702 - Unload Filament
- - Enabled Advanced OK
- - Enabled CLASSIC_JERK (actually stock)
+ - Adds G2 / G3 Arc support (was stock)
+ - Adds G10 / G11 Firmware based retraction (Use M207, M208, M209 to configure) (was missing)
+ - Adds M600 - Filament Change (was missing)
+ - Adds M603 - Set Filament Load / Unload length (was missing)
+ - Adds M701 - Load Filament (was missing)
+ - Adds M702 - Unload Filament (was missing)
+ - Enabled Advanced OK (was missing)
+ - Enabled CLASSIC_JERK (was stock)
  - Enabled S_CURVE_ACCELERATION
  - Enabled Smart Filament Runout Sensor (Add M412 S0 in your Start G-Code if you do not have a filament sensor).
- - Uses hardware EEPROM, not emulated on SD Card. (also stock)
+ - Uses hardware EEPROM, not emulated on SD Card. (was stock)
