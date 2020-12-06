@@ -35,6 +35,7 @@ https://marlin.crc.id.au/faq/Ender%203%20V2/#hybrid
   - Advanced OK enabled - Comms performance improvement to clients eg. OctoPrint
   - TMC Hybrid Threshold enabled - Stepper driver tweak, will provide more torque at the expense of more noise, when motor reaches high speeds
   - Uses hardware EEPROM, not emulated on SD Card - Better performance accessing storage
+  - Re-enabled thermocouple minimum - Fire safety (Disables the heater when the temp sensor acts broken)
 
 
 ### Jerk vs JD, SCurve vs LA ... Fight!
