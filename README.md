@@ -2,6 +2,8 @@
 
 
 For people too poor or stupid to just pay a few bucks to this dude: https://marlin.crc.id.au/firmware/Ender%203%20V2%20-%20Stock/
+That's me. I'm poor.
+Full props to the people who did the hard yards here!
 
 
 
@@ -36,6 +38,8 @@ https://marlin.crc.id.au/faq/Ender%203%20V2/#hybrid
   - TMC Hybrid Threshold enabled - Stepper driver tweak, will provide more torque at the expense of more noise, when motor reaches high speeds
   - Uses hardware EEPROM, not emulated on SD Card - Better performance accessing storage
   - Re-enabled thermocouple minimum - Fire safety (Disables the heater when the temp sensor acts broken)
+- Custom
+  - Added CHEP's Bed Levelling G-code to menu
 
 
 ### Jerk vs JD, SCurve vs LA ... Fight!
