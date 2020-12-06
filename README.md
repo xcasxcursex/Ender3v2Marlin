@@ -1,8 +1,9 @@
 # Auto-built Creality Ender 3 V2 Latest Firmware
 
 
-For people too poor or stupid to just pay a few bucks to this dude: https://marlin.crc.id.au/firmware/Ender%203%20V2%20-%20Stock/
-That's me. I'm poor.
+For people too poor or stupid to [just pay a few bucks to this dude](https://marlin.crc.id.au/firmware/Ender%203%20V2%20-%20Stock/)  
+That's me. I'm poor.  
+
 Full props to the people who did the hard yards here!
 
 
@@ -12,10 +13,8 @@ Based on https://github.com/frealmyr/marlin-build
 
 Using configuration examples from:
 
-https://github.com/xorn/custom_ender3_v2_bltouch
-
-https://www.chepclub.com/ender-3-v2-firmware.html
-
+https://github.com/xorn/custom_ender3_v2_bltouch  
+https://www.chepclub.com/ender-3-v2-firmware.html  
 https://marlin.crc.id.au/faq/Ender%203%20V2/#hybrid
 
 
