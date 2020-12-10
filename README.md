@@ -1,44 +1,78 @@
-# Auto-built Creality Ender 3 V2 Latest Firmware
+# Auto-built [Marlin](https://github.com/MarlinFirmware/Marlin/) for [Creality Ender 3 V2](https://www.creality.com/goods-detail/ender-3-v2-3d-printer)
 
 
 For people too poor or stupid to [just pay a few bucks to this dude](https://marlin.crc.id.au/firmware/Ender%203%20V2%20-%20Stock/)  
-That's me. I'm poor.  
+That's me. I'm both ;)  
 
-Full props to the people who did the hard yards here!
+#### NOTE: WIP  
+I will remove this notice once I've confirmed everything is working as intended.  
 
-
-
-Based on https://github.com/frealmyr/marlin-build
-
-
+### Credit  
+Full props to the people who did the hard yards here!  
+Auto build system by https://github.com/frealmyr/marlin-build  
+  
 Using configuration examples from:
 
 https://github.com/xorn/custom_ender3_v2_bltouch  
 https://www.chepclub.com/ender-3-v2-firmware.html  
-https://marlin.crc.id.au/faq/Ender%203%20V2/#hybrid
+https://marlin.crc.id.au/faq/Ender%203%20V2/#hybrid  
+https://github.com/smith3d/Marlin/tree/bugfix-2.0.x-Smith3D  
+https://github.com/rollyceballos/MarlinEnder3V2/  
+  
+  
+  
+Basically, I wanted to use the latest firmware, I don't own a BLTouch, I can't pay for it and I can code, so I build my own.
 
+I combine the featuresets of all the above firmwares: Marlin Firmware Service, Smith3D, CHEP, 
+And I use frealmyr's build system.
+
+Those people deserve full credit for any good that comes of this. I'm just a librarian ;)
 
 ## Changes from Marlin stock Ender 3 V2 configuration:
 - Extrusion
-  - Adds G10 / G11 Firmware based retraction (Use M207, M208, M209 to configure)
-  - Adds M600 - Filament Change
-  - Adds M603 - Set Filament Load / Unload length
-  - Adds M701 - Load Filament
-  - Adds M702 - Unload Filament
-  - Nozzle Parking enabled
+  - G10 / G11 Firmware based retraction (Use M207, M208, M209 to configure)
+  - M600 Filament Change enabled
+  - M603 Set Filament Load / Unload length enabled
+  - M701 Load Filament enabled
+  - M702 Unload Filament enabled
+  - G27 Nozzle Parking enabled (and used for abort procedure)
+  - Faster filament unload
 - Motion
-  - Adds G2 / G3 - Arc support
+  - G2 / G3 Arc support enabled
   - S-Curve Acceleration enabled
   - Junction Deviation enabled \ Jerk disabled
+  - PID Menus enabled
 - Hardware Support
-  - Bed set to 235 x 235 - As per Creality spec
+  - Bed set to 235 x 235 - As per Creality spec - with a 3mm border for safety
   - SDIO Support enabled - Faster SD card access
   - Advanced OK enabled - Comms performance improvement to clients eg. OctoPrint
   - TMC Hybrid Threshold enabled - Stepper driver tweak, will provide more torque at the expense of more noise, when motor reaches high speeds
-  - Uses hardware EEPROM, not emulated on SD Card - Better performance accessing storage
+  - Hardware EEPROM, not emulated on SD Card - Better performance accessing storage
   - Re-enabled thermocouple minimum - Fire safety (Disables the heater when the temp sensor acts broken)
+  - Increased watch times - more reliable thermal protection (Monitors temp change success for longer)
+  - PID Tuning menus enabled
 - Custom
+  - Show print progress and enable update via M73
   - Added CHEP's Bed Levelling G-code to menu
+
+## To Do  
+
+
+LCD Menus
+  - UBL/etc
+  - Smith3D/rolly custom gems (waiting on https://github.com/frealmyr/marlin-build/issues/5)
+
+UBL Manual Mesh Bed Leveling
+
+Test LA vs S-Curve  
+  - Does the acceleration curve applying to extrusion axis, reduce extrusion variation from pressure, thus performing the same role as LA?
+  - Is the experimental support working OK?
+  - If not, which is more critical? 
+
+Test Fan control  
+  - Fast PWM vs Software PWM vs stock
+  - Manually set frequencies, default works out to around 140KHz
+  - What temp are fan MOSFETS hitting, stock vs modded?
 
 
 ### Jerk vs JD, SCurve vs LA ... Fight!
