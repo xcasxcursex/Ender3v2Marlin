@@ -119,4 +119,7 @@ An experimental option is present, which allows both to be used simultaneously, 
 
 The benefits of each feature are well known and accepted, so choosing "which is best?" is too hard. A "which is least worst?" approach will do. The only real argument against either of them is that Linear Advance may be less effective in a Bowden setup. So, if I have to choose one to ditch, it's LA....but, there are also arguments that bowden setups benefit the most from LA.
 
-Really, I can't decide. So I'm going with the experimental option for now, and enable both.
+Update:
+After looking into this (reading devs' posts on the matter), I am completely confident that the experimental support is in fact just a way to allow us to break things. There is no way that LA and SC can coexist and remain functional.
+
+SC is not going away, it is there to counter physical phenomenon (inertia, resonance, etc) and cannot be done away with. LA is there to counter a design flaw (extruder lag) and is needed, but the current implementation is immature. Accordingly, I will enable S-Curves, and wait for LA 2.0 (yes that's a real thing). If extrusion turns out to be a big issue and vibration not, then I'll swap. I won't be changing any files to do this - LA will still be enabled in firmware - it will remain set to 0 so it does nothing. If someone wants to set the value and use both, it's on them.
